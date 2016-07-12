@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Flexbox</title>
+		<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="reset.css">
+		<style type="text/css">
+		nav{
+			font-family: roboto;
+			background-color: #f5d76e;
+			/*margin: 30px auto;*/
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items:stretch;
+			padding: 0;	
+		}
+				
+		a{
+			text-decoration: none;
+			color: #fff;
+			flex:1;
+			height: 30px;
+			font-family: Dosis;
+			padding:20px 20px 20px 20px;
+			text-align: center;
+			font-size: 2em;
+			border-bottom:1px solid #e58a52;
+
+		}
+		#logoNav{
+			font-size: 2em;
+			font-weight: bold;
+			}
+
+		section {
+			display: flex;
+			flex-flow: row wrap;
+			align-items: center;
+			justify-content: space-around;
+			background-color: #f5d76e;
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}	
+
+		h2 {
+				font-family: Dosis;
+				font-size: 2em;
+				text-align: center;
+			}
+
+		@media screen and (min-width: 700px){
+			nav{
+			/*Code goes here*/
+				flex-direction: row;
+				align-items: baseline;
+			
+			}
+
+			a{
+			/*Code goes here*/
+				border-bottom :none;
+				border-left: 1px solid #e58a52;
+				font-size: 1.2em;
+
+			}
+			#logoNav{
+			/*Code goes here*/
+				flex:5;
+				text-align: left;
+				border-left: none;
+			
+			}
+
+			.cards{
+				display: flex;
+
+			}
+			.card{
+				width: 25%;
+				background-color: white;
+				padding: 10px;
+        
+			}
+			.card h2{
+				text-align: left;
+				font-size: 1.5em;
+				padding-bottom: 4%;
+        
+			}
+			.card img{
+        		width:100%;
+        		padding-bottom: 4%;
+        	}
+			.card p{
+        		font-family: dosis;
+        		font-size: 1em;
+        		padding-bottom: 4%;
+        		text-align: justify;
+			}
+
+			
+
+			#message {
+				max-width: 266px;
+
+			}
+		}
+
+		@media screen and (max-width: 700px) {
+			section {
+			display: flex;
+			flex-flow: column;
+			align-items: center;
+			justify-content: center;
+			background-color: #f5d76e;
+			padding-top: 30px;
+			}	
+
+			#imgMain {
+				padding-top: 30px;
+
+			}
+
+			.cards{
+				display: flex;
+				flex-direction: column;
+
+			}
+			.card{
+				width: 80%;
+				background-color: white;
+				padding-top: 0;
+				padding: 10px;
+				margin-bottom: 15px;
+        
+			}
+			.card h2{
+				text-align: left;
+				font-size: 1.5em;
+				padding-bottom: 4%;
+        
+			}
+			.card img{
+        		width:100%;
+        		padding-bottom: 4%;
+        	}
+			.card p{
+        		font-family: dosis;
+        		font-size: 1em;
+        		padding-bottom: 4%;
+        		text-align: justify;
+			}
+
+		}
+
+		</style>
+</head>
+<body>
+
+	<nav>
+		
+			<a id="logoNav">CHOCOBLOCK</a>
+			<a href="#">Home</a>
+			<a href="#">Projects</a>
+			<a href="#">About</a>
+			<a href="#">Contact</a>
+			<a href="#">Photos</a>
+		
+
+	</nav>
+
+	<section>
+		<div id="message">
+			<h2>Make Creative Clever Fun Apps. Simple.</h2>
+		</div>
+
+		<div>
+			<img id="imgMain" src="img/laptop.png" width="350">
+		</div>
+	</section>
+
+	<section class="cards">
+		<div class="card">
+			<img src="img/graphic1.png" alt="Design Pic">
+			<h2>Remote Learning</h2>
+			<p>ChocoBlock you can learn where ever and when ever. Our course is split in to 3 streams that allow you to build your knowledge step by step.</p>
+		</div>
+
+		<div class="card">
+			<img src="img/graphic2.png" alt="Design Pic">
+			<h2>Remote Learning</h2>
+			<p>ChocoBlock you can learn where ever and when ever. Our course is split in to 3 streams that allow you to build your knowledge step by step.</p>
+		</div>
+
+		<div class="card">
+			<img src="img/graphic3.png" alt="Design Pic">
+			<h2>Remote Learning</h2>
+			<p>ChocoBlock you can learn where ever and when ever. Our course is split in to 3 streams that allow you to build your knowledge step by step.</p>
+		</div>
+	</section>
+
+</body>
+</html>
